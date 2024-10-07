@@ -11,7 +11,7 @@ def split_nifti_time(path_to_nii_cine, path_to_nii_split):
     
     for filename in os.listdir(path_to_nii_cine):
         if '.nii.gz' in filename[-7:] or '.nii' in filename[-4:]:
-            nii_data = nib.load(os.path.join(dir_nifti_cine, filename))
+            nii_data = nib.load(os.path.join(path_to_nii_cine, filename))
             img = nii_data.get_fdata()
             header = nii_data.header
             affine = nii_data.affine
